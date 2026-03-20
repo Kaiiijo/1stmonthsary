@@ -164,22 +164,20 @@ const bgMusic   = document.getElementById('bgMusic');
 let   isPlaying = false;
 
 musicBtn.addEventListener('click', () => {
-  if (!bgMusic.src || bgMusic.src === window.location.href) {
-    // No audio file set — show friendly message
-    showMusicNote();
-    return;
-  }
-
-  if (isPlaying) {
+  if (bgMusic.paused) {
+    bgMusic.play()
+      .then(() => {
+        musicBtn.querySelector('.music-label').textContent = 'Playing ♫';
+        musicBtn.classList.add('playing');
+      })
+      .catch(err => {
+        console.error("Playback failed:", err);
+      });
+  } else {
     bgMusic.pause();
     musicBtn.querySelector('.music-label').textContent = 'Our Song';
     musicBtn.classList.remove('playing');
-  } else {
-    bgMusic.play().catch(() => {});
-    musicBtn.querySelector('.music-label').textContent = 'Playing ♫';
-    musicBtn.classList.add('playing');
   }
-  isPlaying = !isPlaying;
 });
 
 function showMusicNote() {
