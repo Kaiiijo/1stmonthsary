@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 1st Monthsary ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400&family=Great+Vibes&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- MUSIC PLAYER -->
+  <div class="music-player" id="musicPlayer">
+    <button class="music-btn" id="musicBtn" aria-label="Play music">
+      <span class="music-icon">♫</span>
+      <span class="music-label">Our Song</span>
+    </button>
+    <audio id="bgMusic" loop>
+      <!-- Add your audio file here: <source src="music.mp3" type="audio/mpeg"> -->
+    </audio>
+  </div>
+
+  <!-- CANVAS for floating particles -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ======================== HERO ======================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="hero-content">
+      <p class="hero-pre animate-fade-up delay-1">one month of us</p>
+      <h1 class="hero-title animate-fade-up delay-2">
+        Happy 1<sup>st</sup> Monthsary,<br />
+        <span class="hero-name">My Love</span>
+        <span class="hero-heart">❤️</span>
+      </h1>
+      <p class="hero-sub animate-fade-up delay-3">and the beginning of forever</p>
+      <div class="scroll-hint animate-fade-up delay-4">
+        <span>scroll to explore</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+    <div class="floating-hearts" id="floatingHearts"></div>
+  </section>
+
+  <!-- ======================== LOVE LETTER ======================== -->
+  <section class="letter-section" id="letterSection">
+    <div class="section-label">a letter for you</div>
+    <div class="letter-container">
+      <div class="letter-paper">
+        <div class="letter-deco">✦</div>
+        <div class="letter-text" id="letterText"></div>
+        <div class="letter-signature">— Forever yours ❤️</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== REASONS ======================== -->
+  <section class="reasons-section" id="reasonsSection">
+    <div class="section-label">reasons i love you</div>
+    <h2 class="section-title">The Way You Make Me Feel</h2>
+    <div class="cards-grid" id="cardsGrid">
+
+      <div class="reason-card" data-delay="0">
+        <div class="card-number">01</div>
+        <div class="card-icon">🌙</div>
+        <h3>You Are My Calm</h3>
+        <p>Even in the middle of my most chaotic days, thinking of you instantly brings me peace. You are my quiet in a loud world.</p>
+      </div>
+
+      <div class="reason-card" data-delay="100">
+        <div class="card-number">02</div>
+        <div class="card-icon">😂</div>
+        <h3>Your Laughter</h3>
+        <p>The way you laugh — fully, freely, without holding back — is one of the most beautiful things I've ever experienced.</p>
+      </div>
+
+      <div class="reason-card" data-delay="200">
+        <div class="card-number">03</div>
+        <div class="card-icon">💬</div>
+        <h3>Every Conversation</h3>
+        <p>Hours feel like minutes when I'm talking to you. You make even the simplest topics feel like the most important ones.</p>
+      </div>
+
+      <div class="reason-card" data-delay="300">
+        <div class="card-number">04</div>
+        <div class="card-icon">🌸</div>
+        <h3>Your Kindness</h3>
+        <p>The warmth you carry in your heart touches everything around you. You make the world genuinely softer and better.</p>
+      </div>
+
+      <div class="reason-card" data-delay="0">
+        <div class="card-number">05</div>
+        <div class="card-icon">✨</div>
+        <h3>How You Inspire Me</h3>
+        <p>Being with you makes me want to be better — a better person, a better partner, someone worthy of the love you give.</p>
+      </div>
+
+      <div class="reason-card" data-delay="100">
+        <div class="card-number">06</div>
+        <div class="card-icon">🤍</div>
+        <h3>Your Realness</h3>
+        <p>You never pretend. The authenticity you carry is rare and precious — and I fall for you more because of it every day.</p>
+      </div>
+
+      <div class="reason-card" data-delay="200">
+        <div class="card-number">07</div>
+        <div class="card-icon">🏠</div>
+        <h3>You Feel Like Home</h3>
+        <p>I didn't know a person could feel like home until I found you. Wherever you are, that is where I belong.</p>
+      </div>
+
+      <div class="reason-card" data-delay="300">
+        <div class="card-number">08</div>
+        <div class="card-icon">🌅</div>
+        <h3>You Make Mornings Better</h3>
+        <p>Waking up knowing I get to talk to you today is genuinely one of life's little joys I never take for granted.</p>
+      </div>
+
+      <div class="reason-card" data-delay="100">
+        <div class="card-number">09</div>
+        <div class="card-icon">💪</div>
+        <h3>Your Strength</h3>
+        <p>You carry so much with such quiet grace. Your resilience moves me deeply and reminds me what true strength looks like.</p>
+      </div>
+
+      <div class="reason-card" data-delay="200">
+        <div class="card-number">10</div>
+        <div class="card-icon">♾️</div>
+        <h3>Simply Being You</h3>
+        <p>No single reason is ever enough. I love you completely — every part, every flaw, every perfect imperfection. All of you.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== SURPRISE ======================== -->
+  <section class="surprise-section" id="surpriseSection">
+    <div class="surprise-inner">
+      <p class="surprise-hint">I have something for you…</p>
+      <button class="surprise-btn" id="surpriseBtn">
+        <span class="btn-heart">❤️</span>
+        <span class="btn-text">Open My Heart</span>
+      </button>
+      <div class="surprise-message" id="surpriseMsg">
+        <div class="surprise-msg-inner">
+          <div class="surprise-stars" id="surpriseStars"></div>
+          <p class="surprise-big">Asawa ko,</p>
+          <p class="surprise-body">
+            Every time I look at you, I'm reminded of how lucky I am. The universe must have spent extra time crafting someone as wonderful as you — and then somehow, impossibly, sent you to me.<br /><br />
+            I promise you this: for every day we have together, I will love you louder than the day before. I'll hold your hand through every storm and celebrate every sunshine with you.<br /><br />
+            This is only the first chapter. And I already know — this is my favorite story.
+          </p>
+          <p class="surprise-sign">— Always yours 🌙</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer">
+    <div class="footer-deco">✦ ✦ ✦</div>
+    <p class="footer-main">Forever yours ❤️</p>
+    <p class="footer-sub">One month down. A lifetime to go.</p>
+    <div class="footer-hearts">💕</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
